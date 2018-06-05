@@ -26,6 +26,7 @@ When building a new web site, some techniques I use to increase performance are:
   7. Make content easy to read
 
 ### Can you explain any common techniques or recent issues solved in regards to front-end security?
+In regards to front-end security, I ran into a CORS issue. To solve this problem, I had to ensure the client-origin for my API matched the url for my client application.
 
 ### What actions have you personally taken on recent projects to increase maintainability of your code?
 To maintain my code, one thing I am a huge fan of is version control. With git, I commit frequently to ensure I have backups to all of my code. If I break something, I can easily jump back in time and go back to code I know works.
