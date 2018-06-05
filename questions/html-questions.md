@@ -1,7 +1,7 @@
 # HTML Questions:
 
 ### What does a `doctype` do?
-  `doctype` is put on the very top of an html file to let the browser know what version og html you are writing on your page. It should be the very first line of code in any html file.
+  `doctype` is put on the very top of an html file to let the browser know what version of html you are writing on your page. It should be the very first line of code in any html file.
   
 ### How do you serve a page with content in multiple languages?
   Always use a language attribute on the html tag to declare the default language of the text in the page. When the page contains content in another language, add a language attribute to an element surrounding that content.
@@ -51,11 +51,11 @@
 
 ### Why is it generally a good idea to position CSS `<link>`s between `<head></head>` and JS `<script>`s just before `</body>`? Do you know any exceptions?
 - You usually put the `<link>` tags in between the `<head>` to prevent Flash of Unstyled Content which gives the user something to look at while the rest of the page is being parsed.
-- Since Javascript blocks rendering by default, and the DOM and CSSOM construction can be also be delayed, it is usually best to keep scripts at the bottom of the page.
+- Since Javascript blocks rendering by default, and the DOM and CSSOM construction can also be delayed, it is usually best to keep scripts at the bottom of the page.
 - Exceptions are if you grab the scripts asynchronously, or at least defer them to the end of the page.
 
 ### What is progressive rendering?
-Progressive rendering is a rendering mode in which the program gradually updates small parts of the entire image refining it from low quality to final result rather than focusing on one small part of the image at a time. The goal of progressive rendering is to always be able to see the process of refining the rendered image as a whole, pretty much like a painter sees his work evolve from a sketch by looking at the whole canvas after he adds more and more details.
+Progressive rendering is a rendering mode in which the program gradually updates small parts of the entire image, refining it from low quality to final result rather than focusing on one small part of the image at a time. The goal of progressive rendering is to always be able to see the process of refining the rendered image as a whole, pretty much like a painter sees his work evolve from a sketch by looking at the whole canvas after he adds more and more details.
 
 ### Why you would use a `srcset` attribute in an image tag? Explain the process the browser uses when evaluating the content of this attribute.
 You would use the srcset attribute when you want to serve different images to users depending on their device display width - serve higher quality images to devices with retina display enhances the user experience while serving lower resolution images to low-end devices increase performance and decrease data wastage (because serving a larger image will not have any visible difference). For example: `<img srcset="small.jpg 500w, medium.jpg 1000w, large.jpg 2000w" src="..." alt="">` tells the browser to display the small, medium or large .jpg graphic depending on the client's resolution.
