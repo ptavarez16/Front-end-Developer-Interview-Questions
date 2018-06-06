@@ -6,7 +6,7 @@ Specificity is a weight that is applied to a given CSS declaration, determined b
 ### What's the difference between "resetting" and "normalizing" CSS? Which would you choose, and why?
 CSS resets aim to remove all built-in browser styling. Standard elements like h1 - h6, p, strong, em end up looking exactly alike, having no decoration at all. You're then supposed to add all decoration yourself.
 
-Normalize.css aims to make built-in browser styling consistent across browsers. Elements like h1 - h6 will appear bold, larger et cetera in a consistent way across browsers. You're then supposed to add only the difference in decoration your design needs.
+Normalize.css aims to make built-in browser styling consistent across browsers. Elements like h1 - h6 will appear bold and larger in a consistent way across browsers. You're then supposed to add only the difference in decoration your design needs.
 
 If I had to choose, I will chose Normalize.css. I feel like having elements render the same consistently across all browsers is important. Also, resetting everything just to restyle again seems counter productive to me.
   
@@ -30,7 +30,7 @@ Empty div method:
 - Parent will establish a new block formatting context and expand to contains its floated children.
 
 ### How would you approach fixing browser-specific styling issues?
-- When the issue and offending browser is indentified, I would look into how to create a seperate styling sheet that would only load when that specific browser is being used.
+- When the issue and offending browser is identified, I would look into how to create a seperate styling sheet that would only load when that specific browser is being used.
 - Use a library like Bootstrap that handles this for me
 
 ### How do you serve your pages for feature-constrained browsers?
@@ -72,7 +72,7 @@ Sadly I am not >.<
 - Advantages:
   - CSS is more maintainable
   - Easy to write nested selectors
-  - Variables for consiting theming
+  - Variables for consistent theming
   - Mixins to generate repeated CSS
   - Splitting code into multiple files in a more efficient way
 - Disadvantages:
