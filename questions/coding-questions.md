@@ -44,9 +44,9 @@ let add = function (a, b) {
 var foo = "Hello";
 (function() {
   var bar = " World";
-  alert(foo + bar);
+  console.log(foo + bar);
 })();
-alert(foo + bar);
+console.log(foo + bar);
 ```
 
 **Answer:**
