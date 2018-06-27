@@ -13,6 +13,8 @@ If I had to choose, I will chose Normalize.css. I feel like having elements rend
 ### Describe Floats and how they work.
 Float is a CSS positioning property. Floated elements remain part of the flow of the web page. There are four valid values for the float property: left, right, none, inherit.
 
+A floated element will move as far to the left or right as it can. Usually this means all the way to the left or right of the containing element. The elements after the floating element will flow around it. The elements before the floating element will not be affected.
+
 ### Describe z-index and how stacking context is formed.
 The z-index property can be specified with an integer value (positive, zero, or negative), which represents the position of the element along the z-axis. If you are not familiar with the z-axis, imagine the page as a stack of layers, each one having a number. Layers are rendered in numerical order, with larger numbers above smaller numbers.
   
@@ -22,6 +24,14 @@ A block formatting context is a part of a visual CSS rendering of a Web page. It
 ### What are the various clearing techniques and which is appropriate for what context?
 .clearfix method:
 - The .clearfix hack uses a clever CSS pseudo selector (:after) to clear floats. Rather than setting the overflow on the parent, you apply an additional class like clearfix to it.
+
+```css
+.group:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+```
 
 Empty div method:
 - `<div style="clear:both;"></div>`
@@ -97,18 +107,21 @@ This part is related to the above about writing efficient CSS. Browsers match se
 ### Describe pseudo-elements and discuss what they are used for.
 A CSS pseudo-element is a keyword added to a selector that lets you style a specific part of the selected element(s). They can be used for decoration (`:first-line`, `:first-letter`) or adding elements to the markup (combined with `content: ...`) without having to modify the markup (`:before`, `:after`).
 
-### Explain your understanding of the box model and how you would tell the browser in CSS to render your layout in different box models.
+### Explain your understanding of the box model...
 - The CSS box model is responsible for calculating:
   - How much space a block-level element takes up.
   - Whether or not borders and/or margins overlap, or collapse.
   - A box's dimensions.
 - The box model has the following rules:
   - The dimensions of a block element are calculated by width, height, padding, borders, and margins.
-  - If no height is specified, a block element will be as high as the content it contains, plus padding (unless there are floats, for which see below).
+  - If no height is specified, a block element will be as high as the content it contains, plus padding (unless there are floats).
   - If no width is specified, a non-floated block element will expand to fit the width of its parent minus padding.
   - The height of an element is calculated by the content's height.
   - The width of an element is calculated by the content's width.
   - By default, paddings and borders are not part of the width and height of an element.
+
+#### How you would tell the browser in CSS to render your layout in different box models?
+```box-sizing: border-box``` or ```box-sizing: content-box```
 
 ### What does ```* { box-sizing: border-box; }``` do? What are its advantages?
 `box-sizing: border-box` changes how the width and height of elements are being calculated, border and padding are also being included in the calculation.
@@ -135,7 +148,6 @@ Elements with `display:inline-block` are like `display:inline` elements, but the
 
 ### What's the difference between a relative, fixed, absolute and statically positioned element?
 A positioned element is an element whose computed position property is either relative, absolute, fixed or sticky.
-
 - static: The default position; the element will flow into the page as it normally would. The top, right, bottom, left and z-index properties do not apply.
 - relative: The element's position is adjusted relative to itself, without changing layout (and thus leaving a gap for the element where it would have been had it not been positioned).
 - absolute: The element is removed from the flow of the page and positioned at a specified position relative to its closest positioned ancestor if any, or otherwise relative to the initial containing block. Absolutely positioned boxes can have margins, and they do not collapse with any other margins. These elements do not affect the position of other elements.
