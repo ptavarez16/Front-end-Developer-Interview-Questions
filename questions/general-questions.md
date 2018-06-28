@@ -34,12 +34,10 @@ To maintain my code, one thing I am a huge fan of is version control. With git, 
 Writing clean and legible code is also key in increasing maintainability. I strive to write code that I anyone will be able to see and know exactly what's going on.
 
 ### Talk about your preferred development environment.
-Tech:
-    
-    I'll like to be part of a team that follows the three server tiers, called development, staging and production (DSP).
-    During the developer server, developers test code and check whether the application runs successfully with that code. Once everything is running smoothly, it's time to move to the staging server.
-    The staging server is optimized to look and work just like the production server. This step is to reinforce testing and confirm that the new code does not break the old code or cause new bugs. Once this is approved by the team to deploy, it's off to the production server.
-    The production server is the last step. Once the approval is done, the application then becomes part of this server.
+I'll like to be part of a team that follows the three server tiers, called development, staging and production (DSP).
+During the developer server, developers test code and check whether the application runs successfully with that code. Once everything is running smoothly, it's time to move to the staging server.
+The staging server is optimized to look and work just like the production server. This step is to reinforce testing and confirm that the new code does not break the old code or cause new bugs. Once this is approved by the team to deploy, it's off to the production server.
+The production server is the last step. Once the approval is done, the application then becomes part of this server.
 
 ### Which version control systems are you familiar with?
 I am familiar with Git and GitHub.
